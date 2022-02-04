@@ -204,6 +204,10 @@ figure{
   width: 100%;
 }
 
+.imga{
+  padding: 0;
+}
+
 .images{
   max-width:100%;
   margin: 0 auto;
@@ -258,6 +262,51 @@ figure{
   transition: .25s ease;
 }
 
+
+/* LightBox Styles */
+
+.lightbox {
+  /* Default to hidden */
+  display: none;
+
+  /* Overlay entire screen */
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-decoration: none;
+  color: red;
+
+  /* A bit of padding around image */
+  padding: 1em;
+
+  /* Translucent background */
+  background: rgba(0, 0, 0, 0.9);
+}
+
+/* Unhide the lightbox when it's the target */
+.lightbox:target {
+  display: block;
+}
+
+.lightbox span {
+  /* Full width and height */
+  display: block;
+  width: 100%;
+  height: 95%;
+
+  /* Size and position background image */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.disc{
+  text-decoration: none;
+  cursor: default;
+}
 
 /* Mobile Styles */
 @media(max-width:930px) {
